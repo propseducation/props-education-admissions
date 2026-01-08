@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Portal - Online Admissions</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+        header { background-color: #007bff; color: white; text-align: center; padding: 20px; }
+        .container { max-width: 800px; margin: 20px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        form { display: flex; flex-direction: column; }
+        label { margin-top: 10px; font-weight: bold; }
+        input, select { padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; }
+        button { margin-top: 20px; padding: 10px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; }
+        button:hover { background-color: #218838; }
+        footer { text-align: center; padding: 10px; background-color: #007bff; color: white; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to EduPortal</h1>
+        <p>Your Gateway to Online Education - Apply for Streams Like MBA in AI</p>
+    </header>
+    
+    <div class="container">
+        <h2>Online Admission Form</h2>
+        <p>Fill in your details to apply for programs such as MBA in AI.</p>
+        
+        <form id="admissionForm">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number (e.g., +1-123-456-7890)">
+            
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email address">
+            
+            <label for="stream">Select Stream:</label>
+            <select id="stream" name="stream" required>
+                <option value="">Choose a stream</option>
+                <option value="mba-ai">MBA in AI (Online)</option>
+                <option value="mba-data">MBA in Data Science (Online)</option>
+                <option value="bachelor-cs">Bachelor in Computer Science (Online)</option>
+                <option value="other">Other</option>
+            </select>
+            
+            <button type="submit">Submit Application</button>
+        </form>
+        
+        <div id="response" style="margin-top: 20px; display: none;">
+            <h3>Application Submitted!</h3>
+            <p>Thank you for applying. We'll contact you soon.</p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 EduPortal. All rights reserved. Contact: support@eduportal.com</p>
+    </footer>
+    
+    <script>
+        document.getElementById('admissionForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // In a real site, this would send data to a server. For demo, just show a message.
+            document.getElementById('response').style.display = 'block';
+            alert('Form submitted! (In a real site, this would process your application.)');
+        });
+    </script>
+</body>
+</html>
